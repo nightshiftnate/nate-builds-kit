@@ -1,0 +1,50 @@
+{
+  "tool_patterns": [
+    "^mcp__.*(send|reply|forward).*(mail|message|gmail|draft).*$",
+    "^mcp__.*(mail|gmail|outlook|smtp|sendgrid|mailgun|postmark|resend).*(send|reply|forward).*$"
+  ],
+  "reply_tool_patterns": [
+    "reply"
+  ],
+  "draft_keys": [
+    "draftId",
+    "draft_id",
+    "draft"
+  ],
+  "shell_tools": [
+    "Bash",
+    "Monitor"
+  ],
+  "bash_patterns": [
+    "\\bsendmail\\b",
+    "\\bmsmtp\\b",
+    "\\bmutt\\b",
+    "\\bswaks\\b",
+    "\\bmailsend\\b",
+    "smtps?://",
+    "(?:^|[|;&({\\n]|\\bsudo|\\bexec|\\bcommand|\\bnohup|\\bxargs|-c\\s+['\\\"])\\s*(?:\\S{0,200}/)?mailx?\\b",
+    "\\bmailx?\\s+(?:-[sbcrEaq]\\b|[^\\s@]+@)"
+  ],
+  "safe_flags": [
+    "-s", "-a", "-c", "-b", "-i", "-v", "-f", "-r", "-F", "-u", "-T", "-k",
+    "-n", "-e", "-E", "-oi", "-sS",
+    "--to", "--from", "--cc", "--bcc", "--server", "--host", "--port", "--account",
+    "--auth", "--auth-user", "--auth-password", "--tls", "--tls-on-connect", "--ssl",
+    "--ssl-reqd", "--url", "--mail-from", "--mail-rcpt", "--mail-auth",
+    "--upload-file", "--user", "--silent", "--show-error", "--verbose", "--insecure",
+    "--netrc", "--subject", "--attach", "--sender", "--envelope-from", "--header",
+    "--add-header", "--body", "--ehlo", "--helo", "--timeout", "--protocol"
+  ],
+  "recipient_keys": [
+    "to",
+    "cc",
+    "bcc",
+    "recipient",
+    "recipients"
+  ],
+  "address_keys": [
+    "email",
+    "address",
+    "emailAddress"
+  ]
+}

@@ -1,0 +1,5 @@
+# Approved recipients. One per line. Lines starting with # are skipped.
+# An exact address, or a whole domain written as @example.com.
+# Anyone not listed makes Claude Code stop and ask you.
+you@example.com
+@example.org
