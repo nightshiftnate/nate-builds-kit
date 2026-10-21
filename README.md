@@ -20,6 +20,7 @@ Every command below runs from this folder.
 | CLIPS | [clip-variants/](clip-variants/) | Cuts one folder of clips into many short videos with different hooks, so you can test which hook works. | See [clip-variants/](clip-variants/#setup) (needs ffmpeg and a Python venv) |
 | GUARD | [send-guard/](send-guard/) | A Claude Code hook that checks email before it goes out. If the recipient isn't on your approved list, Claude Code stops and asks you. | `mkdir -p ~/.claude/hooks/send-guard && cp send-guard/{send_guard.py,config.json,approved.txt} ~/.claude/hooks/send-guard/` then add the hook from [send-guard/](send-guard/#setup) |
 | SKILLS | [skill-usage/](skill-usage/) | Counts each Claude Code skill two ways (calls and file reads) from your own transcripts, so you only delete what both counts say is dead. | `python3 skill-usage/skill_usage.py --help` |
+| CHIME | [chime/](chime/) | A Claude Code hook that plays a sound when Claude finishes, so you can work on something else and come back the second it's done. | `mkdir -p ~/.claude/hooks && cp chime/chime.py ~/.claude/hooks/chime.py` then add the hook from [chime/](chime/#setup) |
 
 More builds get added as each reel posts.
 
