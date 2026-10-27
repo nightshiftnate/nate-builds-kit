@@ -1,6 +1,6 @@
-# Nate Builds starter kit
+# Nate Builds kit
 
-Working builds from the reels on Instagram at [@nightshiftnate](https://www.instagram.com/nightshiftnate/). If you commented KIT or a build keyword, this is the repo. Each folder is one build with its own README.
+The prompts and code behind the reels at [@nightshiftnate](https://www.instagram.com/nightshiftnate/). Every reel there is motion graphics or video built in Claude Code, and each one gets a folder here with the prompt, what broke along the way, and the command that renders it. If you commented a keyword on a reel, the folder with that keyword is the one you want.
 
 ## Get it
 
@@ -11,7 +11,17 @@ cd nate-builds-kit
 
 Every command below runs from this folder.
 
-## Menu
+## Motion and video
+
+Folders land here as each motion reel posts.
+
+| Keyword | Folder | What it does | Setup |
+|---|---|---|---|
+| EDIT | [edit-check/](edit-check/) | A Python script that checks a rendered video before you watch it: length, size, frame rate, audio, loudness, peak, silence, black frames, frozen video, and an optional script match. Each check measures the file and prints PASS or FAIL. Claude Code runs it after every render and fixes what fails. | Copy [edit_check.py](edit-check/edit_check.py) into your video project, then paste [edit-check/CLAUDE.md](edit-check/CLAUDE.md) into its `CLAUDE.md` (needs ffmpeg) |
+
+## Earlier builds
+
+These came from the account's first reels, before it went all in on motion. They still work and they're still free.
 
 | Keyword | Folder | What it does | Setup |
 |---|---|---|---|
@@ -23,13 +33,11 @@ Every command below runs from this folder.
 | CHIME | [chime/](chime/) | A Claude Code hook that plays a sound when Claude finishes, so you can work on something else and come back the second it's done. | `mkdir -p ~/.claude/hooks && cp chime/chime.py ~/.claude/hooks/chime.py` then add the hook from [chime/](chime/#setup) |
 | OUTLIERS | [outliers/](outliers/) | Finds Instagram reels that beat a creator's normal views by 3x or more, from a watchlist you choose, using Instagram's official API. Search it in the terminal or ask your Claude Code through an MCP server. | `claude mcp add outliers -s user -- python3 "$PWD/outliers/mcp_server.py"` after the Meta setup in [outliers/](outliers/#setup) |
 
-More builds get added as each reel posts.
-
 ## Requirements
 
-- Claude Code for `overnight` and `send-guard`.
-- Python 3.9 or newer for `decision-journal`, `send-guard`, `skill-usage`, and `clip-variants`.
-- ffmpeg for `clip-variants` (on a Mac: `brew install ffmpeg`).
+- Claude Code for `overnight`, `send-guard` and `edit-check`.
+- Python 3.9 or newer for `decision-journal`, `send-guard`, `skill-usage`, `clip-variants`, and `edit-check`.
+- ffmpeg for `clip-variants` and `edit-check` (on a Mac: `brew install ffmpeg`).
 - Tested on macOS. Linux should work. Windows isn't tested.
 
 ## Credit
