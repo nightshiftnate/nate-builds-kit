@@ -17,6 +17,7 @@ Folders land here as each motion reel posts.
 
 | Keyword | Folder | What it does | Setup |
 |---|---|---|---|
+| CUT | [cut/](cut/) | The exact prompt from the "How to edit a video with Claude Code" reel. One line that cuts the pauses out of a clip and burns in captions, plus what happened when I ran it. | Put your video in a folder as `clip.mp4`, run `claude` there, and paste the prompt from [cut/](cut/) (needs ffmpeg-full and whisper.cpp) |
 | EDIT | [edit-check/](edit-check/) | A Python script that checks a rendered video before you watch it: length, size, frame rate, audio, loudness, peak, silence, black frames, frozen video, and an optional script match. Each check measures the file and prints PASS or FAIL. Claude Code runs it after every render and fixes what fails. | Copy [edit_check.py](edit-check/edit_check.py) into your video project, then paste [edit-check/CLAUDE.md](edit-check/CLAUDE.md) into its `CLAUDE.md` (needs ffmpeg) |
 
 ## Earlier builds
@@ -35,9 +36,10 @@ These came from the account's first reels, before it went all in on motion. They
 
 ## Requirements
 
-- Claude Code for `overnight`, `send-guard` and `edit-check`.
+- Claude Code for `overnight`, `send-guard`, `edit-check` and `cut`.
 - Python 3.9 or newer for `decision-journal`, `send-guard`, `skill-usage`, `clip-variants`, and `edit-check`.
 - ffmpeg for `clip-variants` and `edit-check` (on a Mac: `brew install ffmpeg`).
+- For `cut`: an ffmpeg build that can burn in captions, plus whisper.cpp (on a Mac: `brew install ffmpeg-full whisper-cpp`).
 - Tested on macOS. Linux should work. Windows isn't tested.
 
 ## Credit

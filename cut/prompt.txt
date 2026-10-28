@@ -1,0 +1,1 @@
+Cut every pause longer than half a second out of clip.mp4 and burn in captions.
