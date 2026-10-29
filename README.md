@@ -19,6 +19,7 @@ Folders land here as each motion reel posts.
 |---|---|---|---|
 | CUT | [cut/](cut/) | The exact prompt from the "How to edit a video with Claude Code" reel. One line that cuts the pauses out of a clip and burns in captions, plus what happened when I ran it. | Put your video in a folder as `clip.mp4`, run `claude` there, and paste the prompt from [cut/](cut/) (needs ffmpeg-full and whisper.cpp) |
 | EDIT | [edit-check/](edit-check/) | A Python script that checks a rendered video before you watch it: length, size, frame rate, audio, loudness, peak, silence, black frames, frozen video, and an optional script match. Each check measures the file and prints PASS or FAIL. Claude Code runs it after every render and fixes what fails. | Copy [edit_check.py](edit-check/edit_check.py) into your video project, then paste [edit-check/CLAUDE.md](edit-check/CLAUDE.md) into its `CLAUDE.md` (needs ffmpeg) |
+| BLENDER | [blender/](blender/) | Both prompts from the Blender camera-planning reel. Claude Code builds a grey-box street scene in Blender and renders a five-second clip, then you hand that clip to an AI video model so it follows your camera move. Includes the Blender connector setup. | Install Blender and its MCP add-on, connect it with `claude mcp add`, then paste the prompts from [blender/](blender/) (the video step is paid) |
 
 ## Earlier builds
 
@@ -36,7 +37,7 @@ These came from the account's first reels, before it went all in on motion. They
 
 ## Requirements
 
-- Claude Code for `overnight`, `send-guard`, `edit-check` and `cut`.
+- Claude Code for `overnight`, `send-guard`, `edit-check`, `cut` and `blender`.
 - Python 3.9 or newer for `decision-journal`, `send-guard`, `skill-usage`, `clip-variants`, and `edit-check`.
 - ffmpeg for `clip-variants` and `edit-check` (on a Mac: `brew install ffmpeg`).
 - For `cut`: an ffmpeg build that can burn in captions, plus whisper.cpp (on a Mac: `brew install ffmpeg-full whisper-cpp`).

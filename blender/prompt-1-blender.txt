@@ -1,0 +1,1 @@
+Using Blender, build a grey-box scene: a straight street with boxes on both sides as buildings, and an orange mannequin walking down the middle. Add one camera that starts low behind the mannequin and cranes up and around to its right side, always aimed at it. Five seconds, vertical. Render it to an mp4.
