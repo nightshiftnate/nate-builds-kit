@@ -35,6 +35,10 @@ These came from the account's first reels, before it went all in on motion. They
 | CHIME | [chime/](chime/) | A Claude Code hook that plays a sound when Claude finishes, so you can work on something else and come back the second it's done. | `mkdir -p ~/.claude/hooks && cp chime/chime.py ~/.claude/hooks/chime.py` then add the hook from [chime/](chime/#setup) |
 | OUTLIERS | [outliers/](outliers/) | Finds Instagram reels that beat a creator's normal views by 3x or more, from a watchlist you choose, using Instagram's official API. Search it in the terminal or ask your Claude Code through an MCP server. | `claude mcp add outliers -s user -- python3 "$PWD/outliers/mcp_server.py"` after the Meta setup in [outliers/](outliers/#setup) |
 
+## The voice
+
+The voiceover on the reels is me reading the script, run through ElevenLabs Voice Changer into a clone of my own voice. If you want to try ElevenLabs, this is my affiliate link: https://try.elevenlabs.io/roscozv4ojkx. I get a commission if you subscribe, and it costs you nothing extra.
+
 ## Requirements
 
 - Claude Code for `overnight`, `send-guard`, `edit-check`, `cut` and `blender`.
