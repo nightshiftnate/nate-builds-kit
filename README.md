@@ -22,6 +22,8 @@ Folders land here as each motion reel posts.
 | BLENDER | [blender/](blender/) | Both prompts from the Blender camera-planning reel. Claude Code builds a grey-box street scene in Blender and renders a five-second clip, then you hand that clip to an AI video model so it follows your camera move. Includes the Blender connector setup. | Install Blender and its MCP add-on, connect it with `claude mcp add`, then paste the prompts from [blender/](blender/) (the video step is paid) |
 | SOUND | [sound/](sound/) | The exact prompt from the ElevenLabs reel. You ask Claude Code in plain English for a short vertical clip, and ElevenLabs makes the shot, the music and the sound effects and joins them into one clip. Includes what Claude wrote, the fix, and the real credit cost. | One `claude mcp add` command, sign in with your ElevenLabs account, paste the prompt (uses your ElevenLabs credits) |
 | ENGRAVE | [engrave/](engrave/) | The install line and exact prompt from the "My mug, drawn like a dollar bill" reel. A free open-source skill turns one photo into a bank-note style engraving whose sun still moves. Includes what happened when I ran it. | `npx skills add bumicodes/draw-beautiful -g -a claude-code`, then paste the prompt from [engrave/](engrave/) |
+| STUDIO | [studio/](studio/) | The first prompt from the "Claude is now a video studio" reel. One command installs the HyperFrames skills into Claude Code, then one sentence gets you a rendered motion graphic. Includes what happened when I ran it. | `npx hyperframes skills`, then paste the prompt from [studio/](studio/) in an empty folder (needs Node.js) |
+| RENDER | [render/](render/) | How I set up HyperFrames with Claude Code to make the film, plus re-rendering only the seconds you changed with `--start` and `--end` and splicing them back in. Real timings included. | `npx hyperframes skills`, then follow [render/](render/) (needs Node.js, and ffmpeg for the splice) |
 
 ## Earlier builds
 
@@ -43,9 +45,10 @@ The voiceover on the reels is me reading the script, run through ElevenLabs Voic
 
 ## Requirements
 
-- Claude Code for `overnight`, `send-guard`, `edit-check`, `cut`, `blender` and `sound`.
+- Claude Code for `overnight`, `send-guard`, `edit-check`, `cut`, `blender`, `sound`, `studio` and `render`.
+- Node.js for `studio` and `render` (on a Mac: `brew install node`).
 - Python 3.9 or newer for `decision-journal`, `send-guard`, `skill-usage`, `clip-variants`, and `edit-check`.
-- ffmpeg for `clip-variants` and `edit-check` (on a Mac: `brew install ffmpeg`).
+- ffmpeg for `clip-variants`, `edit-check` and the splice step in `render` (on a Mac: `brew install ffmpeg`).
 - For `cut`: an ffmpeg build that can burn in captions, plus whisper.cpp (on a Mac: `brew install ffmpeg-full whisper-cpp`).
 - Tested on macOS. Linux should work. Windows isn't tested.
 
