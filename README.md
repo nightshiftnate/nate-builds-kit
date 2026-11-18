@@ -24,6 +24,7 @@ Folders land here as each motion reel posts.
 | ENGRAVE | [engrave/](engrave/) | The install line and exact prompt from the "My mug, drawn like a dollar bill" reel. A free open-source skill turns one photo into a bank-note style engraving whose sun still moves. Includes what happened when I ran it. | `npx skills add bumicodes/draw-beautiful -g -a claude-code`, then paste the prompt from [engrave/](engrave/) |
 | STUDIO | [studio/](studio/) | The first prompt from the "Claude is now a video studio" reel. One command installs the HyperFrames skills into Claude Code, then one sentence gets you a rendered motion graphic. Includes what happened when I ran it. | `npx hyperframes skills`, then paste the prompt from [studio/](studio/) in an empty folder (needs Node.js) |
 | RENDER | [render/](render/) | How I set up HyperFrames with Claude Code to make the film, plus re-rendering only the seconds you changed with `--start` and `--end` and splicing them back in. Real timings included. | `npx hyperframes skills`, then follow [render/](render/) (needs Node.js, and ffmpeg for the splice) |
+| STATS | [stats/](stats/) | The prompt from the "82% skipped in 3 seconds" reel. Claude reads your reel numbers through Metricool and ranks which openings lost people fastest in the first three seconds, so you know which one to rewatch. | Add Metricool under Customize, then Connectors in Claude, then paste the prompt from [stats/](stats/) (needs a Metricool account with your Instagram connected) |
 
 ## Earlier builds
 
