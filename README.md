@@ -29,7 +29,7 @@ Folders land here as each motion reel posts.
 
 ## Earlier builds
 
-These came from the account's first reels, before it went all in on motion. They still work and they're still free.
+These came from the account's first reels, before it went all in on motion. They still work and they're still free. Comment TOOLS for five of them on one page: [tools/](tools/).
 
 | Keyword | Folder | What it does | Setup |
 |---|---|---|---|
