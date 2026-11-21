@@ -1,6 +1,6 @@
 # Nate Builds kit
 
-The prompts and code behind the reels at [@nightshiftnate](https://www.instagram.com/nightshiftnate/). Every reel there is motion graphics or video built in Claude Code, and each one gets a folder here with the prompt, what broke along the way, and the command that renders it. If you commented a keyword on a reel, the folder with that keyword is the one you want.
+The prompts and code behind the reels at [@natecodesclaude](https://www.instagram.com/natecodesclaude/). Every reel there is motion graphics or video built in Claude Code, and each one gets a folder here with the prompt, what broke along the way, and the command that renders it. If you commented a keyword on a reel, the folder with that keyword is the one you want.
 
 ## Get it
 
@@ -25,6 +25,7 @@ Folders land here as each motion reel posts.
 | STUDIO | [studio/](studio/) | The first prompt from the "Claude is now a video studio" reel. One command installs the HyperFrames skills into Claude Code, then one sentence gets you a rendered motion graphic. Includes what happened when I ran it. | `npx hyperframes skills`, then paste the prompt from [studio/](studio/) in an empty folder (needs Node.js) |
 | RENDER | [render/](render/) | How I set up HyperFrames with Claude Code to make the film, plus re-rendering only the seconds you changed with `--start` and `--end` and splicing them back in. Real timings included. | `npx hyperframes skills`, then follow [render/](render/) (needs Node.js, and ffmpeg for the splice) |
 | STATS | [stats/](stats/) | The prompt from the "82% skipped in 3 seconds" reel. Claude reads your reel numbers through Metricool and ranks which openings lost people fastest in the first three seconds, so you know which one to rewatch. | Add Metricool under Customize, then Connectors in Claude, then paste the prompt from [stats/](stats/) (needs a Metricool account with your Instagram connected) |
+| PROMPTS | [prompts/](prompts/) | All 7 prompts from the "7 prompts that edit video for me" carousel on one page, each linked to its setup folder. | None for the page; each prompt links to the setup it needs |
 
 ## Earlier builds
 
