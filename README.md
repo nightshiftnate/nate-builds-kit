@@ -25,6 +25,7 @@ Folders land here as each motion reel posts.
 | STUDIO | [studio/](studio/) | The first prompt from the "Claude is now a video studio" reel. One command installs the HyperFrames skills into Claude Code, then one sentence gets you a rendered motion graphic. Includes what happened when I ran it. | `npx hyperframes skills`, then paste the prompt from [studio/](studio/) in an empty folder (needs Node.js) |
 | RENDER | [render/](render/) | How I set up HyperFrames with Claude Code to make the film, plus re-rendering only the seconds you changed with `--start` and `--end` and splicing them back in. Real timings included. | `npx hyperframes skills`, then follow [render/](render/) (needs Node.js, and ffmpeg for the splice) |
 | STATS | [stats/](stats/) | The prompt from the "82% skipped in 3 seconds" reel. Claude reads your reel numbers through Metricool and ranks which openings lost people fastest in the first three seconds, so you know which one to rewatch. | Add Metricool under Customize, then Connectors in Claude, then paste the prompt from [stats/](stats/) (needs a Metricool account with your Instagram connected) |
+| DESK | [desk/](desk/) | The 7 prompts and the rules file from the "Blender never opened" reel. Each prompt becomes a Python script that Blender runs headless, adding one object to a night desk and rendering the clip. | Install Blender, save the rules from [desk/](desk/) as `CLAUDE.md` in an empty folder, then send the 7 prompts one at a time |
 | PROMPTS | [prompts/](prompts/) | All 7 prompts from the "7 prompts that edit video for me" carousel on one page, each linked to its setup folder. | None for the page; each prompt links to the setup it needs |
 
 ## Earlier builds
@@ -47,7 +48,8 @@ The voiceover on the reels is me reading the script, run through ElevenLabs Voic
 
 ## Requirements
 
-- Claude Code for `overnight`, `send-guard`, `edit-check`, `cut`, `blender`, `sound`, `studio` and `render`.
+- Claude Code for `overnight`, `send-guard`, `edit-check`, `cut`, `blender`, `desk`, `sound`, `studio` and `render`.
+- Blender for `blender` and `desk` (free, blender.org).
 - Node.js for `studio` and `render` (on a Mac: `brew install node`).
 - Python 3.9 or newer for `decision-journal`, `send-guard`, `skill-usage`, `clip-variants`, and `edit-check`.
 - ffmpeg for `clip-variants`, `edit-check` and the splice step in `render` (on a Mac: `brew install ffmpeg`).
